@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GHOST-OS</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="top-bar">
+            <div class="top-bar-left">
+                <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">☰</button>
+                <div id="nav-menu" class="nav-menu" role="menu" aria-hidden="true">
+                    <button role="menuitem" class="nav-item">Home</button>
+                    <button role="menuitem" class="nav-item">Profile</button>
+                        <button role="menuitem" class="nav-item">Settings</button>
+                        <button role="menuitem" class="nav-item" data-action="launcher">Launcher</button>
+                </div>
+            </div>
+            <div class="top-bar-content">
+                <div class="brand">GHOST-OS</div>
+                <div id="top-clock" class="top-clock" aria-live="polite" aria-atomic="true">--:--:--</div>
+            </div>
+            
+        </div>
+        <h1 class="neon">GHOST-OS</h1>
+
+        <!-- App launcher area -->
+        <div class="apps">
+            <div class="app-tile">
+                <button class="app-card" data-app="launcher" aria-label="Open Launcher">
+                    <span class="app-icon" aria-hidden="true">
+                        <img src="search_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="Search icon">
+                    </span>
+                </button>
+                <div class="app-label">Launcher</div>
+            </div>
+        </div>
+
+        <div class="border-wrapper">
+            <p id="typewriter-text"></p>
+        </div>
+
+        <!-- Launcher modal -->
+        <div id="launcher-modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="launcher-title">
+            <div class="modal-backdrop"></div>
+            <div class="modal-content">
+                <button class="modal-close" aria-label="Close">×</button>
+                <h2 id="launcher-title">Launcher</h2>
+                <p>Welcome to the Launcher app. Add shortcuts or actions here.</p>
+                <div class="launcher-storage">
+                    <label class="file-input-label">
+                        <input id="file-input" type="file" multiple hidden>
+                        <button class="launcher-action" id="choose-files">Choose files</button>
+                    </label>
+                    <div id="drop-area" class="drop-area">Drag & drop files here</div>
+                    <ul id="file-list" class="file-list" aria-live="polite"></ul>
+                </div>
+            </div>
+        </div>
+    <script src="index.js"></script>
+    </body>
